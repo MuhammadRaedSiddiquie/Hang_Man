@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --key-animation: key 2s forwards linear;
+}
+
+main {
+    background-color: #ddeedf;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding: 20px 0;
+}
+
+
+
+.main-heading {
+    color: #5c715e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.6rem;
+}
+
+.secondary-heading {
+    color: #5c715e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.2rem;
+}
+
+
+
+.main-content {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+}
+
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text-box {
+    height: 50px;
+
+    padding: 10px 20px;
+    width: 500px;
+}
+
+.text {
+    font-size: 24px;
+    font-family: monospace;
+    text-align: center;
+    color: #5c715e;
+    animation: animated-text 3s linear forwards;
+
+
+}
+
+.text2 {
+    font-size: 28px;
+    font-family: monospace;
+    text-align: center;
+    color: #5c715e;
+    
+
+    animation: animated-text 3s linear forwards;
+
+}
+
+@keyframes animated-text {
+    from{
+        transform: scale(0%);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+
+
+.word {
+    border: none;
+    border-radius: 6px;
+    padding: 5px 0px;
+    height: 75px;
+    font-size: 30px;
+    text-align: center;
+    width: 300px;
+
+}
+
+
+.canva {
+    width: 250px;
+    height: 300px;
+    background-color: rgb(253, 255, 255);
+
+    box-shadow: 4px 4px 0px 0px #b6cdbd, 4px 4px 0px 0px #b6cdbd;
+    border-radius: 5px;
+
+}
+
+
+
+.keypad {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.key-break {
+    margin: 5px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    border-radius: 5px;
+    background-color: #f2f9f1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    /* box-shadow: 3px 3px 0px 0px #b6cdbd; */
+
+}
+
+@keyframes key {
+    to {
+        opacity: 0;
+    }
+}
+
+.again-container {
+    display: none;
+    opacity: 0;
+    animation: container 1.5s forwards linear;
+}
+
+.again-container,
+.play-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #b6cdbd;
+    position: absolute;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.play-container {
+    display: flex;
+
+}
+
+@keyframes container {
+    to {
+        opacity: 100%;
+    }
+}
+
+.btn-play,
+.btn-again {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    font-weight: 900;
+    background-color: #5c715e;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+}
+
+.difficulty {
+    display: none;
+}
+
+.btn-diff {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    font-weight: 900;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    margin: 5px;
+
+}
+
+.easy {
+    background-color: #a1b6a8;
+    ;
+}
+
+.med {
+    background-color: #97ab9d;
+}
+
+.hard {
+    background-color: #8a9b8f;
+}
+
+.btn:hover {
+    background-color: #4c5c4e;
+    transform: scale(1.1);
+
+}
+@media(max-width:475px){
+    main{
+        padding: 0px 0;
+        gap: 5vh;
+    }
+    .main-heading{
+        font-size: 2rem;
+        display: none;
+    }
+    .main-content{
+        flex-direction: column;
+        gap: 0;
+
+    }
+    .aside{
+        height: auto;
+    }
+    .text2{
+        font-size: 20px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .text-box{
+        height: 40px;
+    }
+    .word{
+        height: 50px;
+    font-size: 25px;
+    width: 275px;
+    }
+    .canva{
+        height: 285px;
+    }
+    .keypad{
+        width: 98%;
+    }
+    .key-break{
+        margin: 2px;
+    }
+    .key{
+        height: 40px;
+    }
+    .difficulty{
+        flex-direction: column;
+    }
+}

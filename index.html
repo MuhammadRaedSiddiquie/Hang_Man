@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="playContainer" class="play-container">
+        <h1 class="main-heading">HANGMAN ONLINE</h1>
+        <button id="playBtn" class="btn-play" onclick="selDiff()">Play</button>
+        <div id="selDifficulty" class="difficulty">
+            <button id="btnEsay" class="btn-diff easy" onclick="playGame()">Easy</button>
+            <button id="btnMed" class="btn-diff med " onclick="playGameMed()">Medium</button>
+            <button id="btnHard" class="btn-diff hard" onclick="playGameHard()">Hard</button>
+        </div>
+    </div>
+    <div id="againContainer" class="again-container">
+        <h1 id="textSec" class="secondary-heading">You Won!</h1>
+        <button id="againBtn" class="btn-again" onclick="playAgain()">Play Again</button>
+    </div>
+    <main>
+        <h1 class="main-heading">HANGMAN ONLINE</h1>
+        <div class="main-content">
+            <div class="aside">
+                <div class="text-box">
+                    <p id="hintBox" class="text2"></p>
+                </div>
+                <input id="displayWord" class="word" readonly>
+                <div class="text-box">
+                    <p id="textMain" class="text"></p>
+                </div>
+            </div>
+
+
+            <div class="canva">
+                <canvas id="stickman" width="250" height="300"></canvas>
+            </div>
+
+
+        </div>
+        <div class="keypad">
+            <div class="key-break">
+                <span class="key one" onclick="appendToDisplay('Q'),changeVis(0)">Q</span>
+                <span class="key" onclick="appendToDisplay('W'),changeVis(1)">W</span>
+                <span class="key" onclick="appendToDisplay('E'),changeVis(2)">E</span>
+                <span class="key" onclick="appendToDisplay('R'),changeVis(3)">R</span>
+                <span class="key" onclick="appendToDisplay('T'),changeVis(4)">T</span>
+                <span class="key" onclick="appendToDisplay('Y'),changeVis(5)">Y</span>
+                <span class="key" onclick="appendToDisplay('U'),changeVis(6)">U</span>
+                <span class="key" onclick="appendToDisplay('I'),changeVis(7)">I</span>
+                <span class="key" onclick="appendToDisplay('O'),changeVis(8)">O</span>
+                <span class="key" onclick="appendToDisplay('P'),changeVis(9)">P</span>
+            </div>
+
+            <div class="key-break">
+                <span class="key" onclick="appendToDisplay('A'),changeVis(10)">A</span>
+                <span class="key" onclick="appendToDisplay('S'),changeVis(11)">S</span>
+                <span class="key" onclick="appendToDisplay('D'),changeVis(12)">D</span>
+                <span class="key" onclick="appendToDisplay('F'),changeVis(13)">F</span>
+                <span class="key" onclick="appendToDisplay('G'),changeVis(14)">G</span>
+                <span class="key" onclick="appendToDisplay('H'),changeVis(15)">H</span>
+                <span class="key" onclick="appendToDisplay('J'),changeVis(16)">J</span>
+                <span class="key" onclick="appendToDisplay('K'),changeVis(17)">K</span>
+                <span class="key" onclick="appendToDisplay('L'),changeVis(18)">L</span>
+            </div>
+
+            <div class="key-break">
+                <span class="key" onclick="appendToDisplay('Z'),changeVis(19)">Z</span>
+                <span class="key" onclick="appendToDisplay('X'),changeVis(20)">X</span>
+                <span class="key" onclick="appendToDisplay('C'),changeVis(21)">C</span>
+                <span class="key" onclick="appendToDisplay('V'),changeVis(22)">V</span>
+                <span class="key" onclick="appendToDisplay('B'),changeVis(23)">B</span>
+                <span class="key" onclick="appendToDisplay('N'),changeVis(24)">N</span>
+                <span class="key" onclick="appendToDisplay('M'),changeVis(25)">M</span>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
